@@ -1,12 +1,12 @@
 import React, {useState} from "react";
 import {useDispatch} from "react-redux";
 import {useSelector} from "react-redux";
-import {Box,Button, TextField } from "@mui/material";
+import {Box, TextField } from "@mui/material";
 import Todolist from "./components/todolist/todolist";
 
 import {IconButton} from "@mui/material";
 import AlarmIcon from '@mui/icons-material/Alarm';
-
+import DeleteIcon from "@mui/icons-material/Delete"
 
 const Main = () => {
     const dispatch = useDispatch();
@@ -43,7 +43,7 @@ const Main = () => {
         <Box sx={{display: "flex",}}>
 
             <TextField onChange={handleChange}
-                       placeholder="welcome to hell◘ "></TextField>
+                    placeholder="One Pice"></TextField>
 
             <IconButton
                 onClick={handleClick}
@@ -55,7 +55,7 @@ const Main = () => {
             <IconButton aria-label="delete"
                         color="error"
                         onClick={deleteClick}>
-                <button>Delete</button>
+                <DeleteIcon />
             </IconButton>
         </Box>
 
